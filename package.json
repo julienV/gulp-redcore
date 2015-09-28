@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:phproberto/gulp-redcore.git"
+    "url": "git@github.com:redcomponent-com/gulp-redcore.git"
   },
   "keywords": [
     "joomla",
@@ -16,13 +16,13 @@
     "build"
   ],
   "author": {
-    "name": "Roberto Segura"
+    "name": "redcomponent.com"
   },
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/phproberto/gulp-redcore/issues"
+    "url": "https://github.com/redcomponent-com/gulp-redcore/issues"
   },
-  "homepage": "https://github.com/phproberto/gulp-redcore",
+  "homepage": "https://github.com/redcomponent-com/gulp-redcore",
   "devDependencies": {
   }
 }

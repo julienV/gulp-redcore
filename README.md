@@ -1,0 +1,2 @@
+Gulp scripts for redCORE
+==========

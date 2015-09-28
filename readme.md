@@ -1,2 +1,0 @@
-Gupl builder for redCORE
-==========
