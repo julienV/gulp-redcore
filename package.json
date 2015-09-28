@@ -1,0 +1,28 @@
+{
+  "name": "gulp-redcore",
+  "version": "0.0.1",
+  "description": "Gulp scripts for redCORE",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:phproberto/gulp-redcore.git"
+  },
+  "keywords": [
+    "joomla",
+    "gulp",
+    "build"
+  ],
+  "author": {
+    "name": "Roberto Segura"
+  },
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/phproberto/gulp-redcore/issues"
+  },
+  "homepage": "https://github.com/phproberto/gulp-redcore",
+  "devDependencies": {
+  }
+}
