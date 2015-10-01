@@ -29,6 +29,16 @@ gulp.task('clean:' + baseTask, function() {
 	return del(config.wwwDir + '/media/redcore', {force: true});
 });
 
+// Clean: translations
+gulp.task('clean:' + baseTask + ':translations', function() {
+	return del(config.wwwDir + '/media/redcore/translations', {force: true});
+});
+
+// Clean: webservices
+gulp.task('clean:' + baseTask + ':webservices', function() {
+	return del(config.wwwDir + '/media/redcore/webservices', {force: true});
+});
+
 // Copy
 gulp.task('copy:' + baseTask, ['clean:' + baseTask],
 	function() {
@@ -39,6 +49,20 @@ gulp.task('copy:' + baseTask, ['clean:' + baseTask],
 				'!' + extPath + '/less/**'
 			])
 			.pipe(gulp.dest(config.wwwDir + '/media/redcore'));
+});
+
+// Copy: translations
+gulp.task('copy:' + baseTask + ':translations', ['clean:' + baseTask + ':translations'],
+	function() {
+		return gulp.src(extPath + '/translations/**')
+			.pipe(gulp.dest(config.wwwDir + '/media/redcore/translations'));
+});
+
+// Copy: webservices
+gulp.task('copy:' + baseTask + ':webservices', ['clean:' + baseTask + ':webservices'],
+	function() {
+		return gulp.src(extPath + '/webservices/**')
+			.pipe(gulp.dest(config.wwwDir + '/media/redcore/webservices'));
 });
 
 // LESS
@@ -115,7 +139,9 @@ gulp.task('watch:' + baseTask,
 	[
 		'watch:' + baseTask + ':less',
 		'watch:' + baseTask + ':scripts',
-		'watch:' + baseTask + ':styles'
+		'watch:' + baseTask + ':styles',
+		'watch:' + baseTask + ':translations',
+		'watch:' + baseTask + ':webservices'
 	],
 	function() {
 });
@@ -149,4 +175,18 @@ gulp.task('watch:' + baseTask + ':styles',
 			'!' + extPath + '/css/*.min.css'
 		],
 		['styles:' + baseTask, browserSync.reload]);
+});
+
+// Watch: translations
+gulp.task('watch:' + baseTask + ':translations',
+	function() {
+		gulp.watch([extPath + '/translations/**/*.xml'],
+		['copy:' + baseTask + ':translations', browserSync.reload]);
+});
+
+// Watch: webservices
+gulp.task('watch:' + baseTask + ':webservices',
+	function() {
+		gulp.watch([extPath + '/webservices/**/*'],
+		['copy:' + baseTask + ':webservices', browserSync.reload]);
 });
