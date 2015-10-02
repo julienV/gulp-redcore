@@ -1,6 +1,6 @@
 {
   "name": "gulp-redcore",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Gulp scripts for redCORE",
   "main": "gulpfile.js",
   "scripts": {
