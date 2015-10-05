@@ -22,7 +22,7 @@ These scripts can be used for standalone redCORE development or in projects that
 
 See [redCORE contributing guidelines](https://github.com/redCOMPONENT-COM/redCORE/blob/develop/CONTRIBUTING.md).
 
-### <a name="third-part-setup"></a>2.2. Integration with third part extensions
+### <a name="third-part-setup"></a>2.2. Integration with third party extensions
 
 If your extension uses redCORE + joomla-gulp you can use these scripts to ensure that your Gulp system control tracks everything.
 
