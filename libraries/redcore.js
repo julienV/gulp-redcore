@@ -51,9 +51,7 @@ gulp.task('copy:' + baseTask + ':library',
 	['clean:' + baseTask, 'copy:' + baseTask + ':languages', 'copy:' + baseTask + ':manifest'], function() {
 	return gulp.src([
 		extPath + '/**',
-		'!' + extPath + '/**/*.md',
-		'!' + extPath + '/language',
-		'!' + extPath + '/language/**'
+		'!' + extPath + '/**/*.md'
 	])
 	.pipe(gulp.dest(config.wwwDir + '/libraries/redcore'));
 });
@@ -84,9 +82,7 @@ gulp.task('watch:' + baseTask,
 gulp.task('watch:' +  baseTask + ':library', function() {
 	gulp.watch([
 			extPath + '/**/*',
-			'!' + extPath + '/redcore.xml',
-			'!' + extPath + '/language',
-			'!' + extPath + '/language/**'
+			'!' + extPath + '/redcore.xml'
 		], ['copy:' + baseTask + ':library', browserSync.reload]);
 });
 
