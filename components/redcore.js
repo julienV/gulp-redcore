@@ -1,14 +1,7 @@
 var gulp = require('gulp');
 var fs   = require('fs');
 
-// Third part extension using redCORE
-try {
-	var config = require('../../../../gulp-config.json');
-}
-// redCORE repo
-catch(err) {
-	var config = require('../../../gulp-config.json');
-}
+var config = require('../config.js');
 
 // Dependencies
 var browserSync = require('browser-sync');
